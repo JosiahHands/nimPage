@@ -138,7 +138,7 @@ proc page() {.htmlTmpl: basicPage("Styles of Elvis").} =
         h3("1968")
         html imgCnt():
             html "img src=media/pics/elvis-68.jpg":
-                attr("alt", "Elvis Presley in a black leather suit at the '68 Comeback Special")
+                attr("alt", "Elvis Presley in a black leather suit at the 68 Comeback Special")
             p("This is from the famous '68 Comeback Special. He wore a black leather suit and he was looking awesome! This was a prelude to his awesome style in the 70s.")
 
     html section():
