@@ -36,11 +36,13 @@ proc h3(str: string; style="") =
 # boilerplate
 
 proc basicPage(title: string) {.htmlTmpl: "html".} =
+    attr("lang", "en")
     html "head":
+        html "meta":
+            attr("name", "viewport")
+            attr("content", "width=device-width, initial-scale=1")
         html "title":
             htmlText title
-        html "script":
-            attr("src", "./htmx.min.js")
         html "script":
             attr("src", "./cssMe.js")
         html "body":
@@ -115,49 +117,49 @@ proc page() {.htmlTmpl: basicPage("Styles of Elvis").} =
         h3("1954-1957")
         html imgCnt():
             html "img src=media/pics/elvis-56.png":
-                discard
+                attr("alt", "Elvis Presley in 1956 wearing a loose suit")
             p("This picture is from 1956. As you can see, in the mid 1950s he dressed in a loose suit. He was cool, but he hadn't tapped into his style yet.")
 
     html section():
         h3("1958-1959")
         html imgCnt():
             html "img src=media/pics/elvis-59.jpg":
-                discard
+                attr("alt", "Elvis Presley in his army uniform in 1959")
             p("This picture is from 1959. Elvis got drafted and spent 2 years in the army as a tank driver. He definitely pulled off the army look.")
 
     html section():
         h3("1960-1967")
         html imgCnt():
             html "img src=media/pics/elvis-64.webp":
-                discard
+                attr("alt", "Elvis Presley in 1964 wearing a popped collar shirt")
             p("This picture is from 1964. Elvis was back from the army, making lots of movies and he was starting to get into his style. One of his most iconic looks is the popped collar shirt. He also started to wear more flashy clothes.")
 
     html section():
         h3("1968")
         html imgCnt():
             html "img src=media/pics/elvis-68.jpg":
-                discard
+                attr("alt", "Elvis Presley in a black leather suit at the 68 Comeback Special")
             p("This is from the famous '68 Comeback Special. He wore a black leather suit and he was looking awesome! This was a prelude to his awesome style in the 70s.")
 
     html section():
         h3("1969")
         html imgCnt():
             html "img src=media/pics/elvis-69.jpg":
-                discard
+                attr("alt", "Elvis Presley in 1969 with jewelry and sideburns")
             p("In 1969 his style was similar to the rest of the 60s, but he started to wear more jewelry and grew awesome sideburns.")
 
     html section():
         h3("1970")
         html imgCnt():
             html "img src=media/pics/elvis-70.jpg":
-                discard
+                attr("alt", "Elvis Presley in his first jumpsuit in 1970")
             p("1970 was an huge moment for Elvis! He began wearing these fantastic jumpsuits! This is the first jumpsuit that he wore in the 70s. He was looking awesome!")
 
     html section():
         h3("1971-1977")
         html imgCnt():
             html "img src=media/pics/elvis-70s.jpg":
-                discard
+                attr("alt", "Elvis Presley in a jumpsuit in the 1970s")
             p("I'm not sure exactly when this picture was taken, but it's from the 70s. This jumpsuit is one of my favorites. His jumpsuits just got more and more awesome as time went on. All the way to his final days, Elvis was still putting on the most awesome shows of his career in that incredible style. Elvis certainly lived and died as a Legend.")
 
     html section():
